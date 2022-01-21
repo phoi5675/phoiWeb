@@ -1,18 +1,13 @@
-import styles from './Main.module.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import styles from './Navbar.module.css';
+
 const Navbar = () => {
   return (
-    <nav className={styles.top}>
-      <ul>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/about'>About</Link>
-        </li>
-      </ul>
+    <nav className={styles.container}>
+          <Link className={styles.navBtn} to='/'>Home</Link>
+          <Link className={styles.navBtn} to='/about'>About</Link>
     </nav>
   );
 };

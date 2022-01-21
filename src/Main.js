@@ -1,13 +1,13 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import styles from './Main.module.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Menu from './Menu';
-import Navbar from './Navbar';
-import Content from './Content';
+import styles from "./Main.module.css";
+
+import Menu from "./Menu";
+import Navbar from "./Navbar";
 
 // Pages
-import { About, Error } from './pages';
+import { About, Error, Home } from "./pages";
 
 const Main = () => {
   return (
@@ -16,11 +16,13 @@ const Main = () => {
         <Navbar />
         <div className={styles.content_container}>
           <Menu />
-          <Routes>
-            <Route path='/' element={<Content />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/*' element={<Error />} />
-          </Routes>
+          <div className={styles.content}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/*" element={<Error />} />
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </div>

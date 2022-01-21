@@ -1,0 +1,20 @@
+.container {
+    background-color: indianred;
+    flex-direction: row;
+    align-content: center;
+    height: 50px;
+    text-align: center;
+
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.navBtn {
+    min-height: 100%;
+    margin: 30px;
+    padding: 15px;
+
+    border-width: 5px;
+    border-color: burlywood;
+    border:solid;
+}
