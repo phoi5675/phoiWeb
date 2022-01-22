@@ -9,7 +9,7 @@ import Navbar from "./Navbar";
 // Pages
 import { About, Error, Home } from "./pages";
 
-const Main = () => {
+const App = () => {
   return (
     <div className={styles.main_container}>
       <BrowserRouter>
@@ -29,4 +29,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default App;
