@@ -11,5 +11,5 @@ docker build --rm -f dockerfiles/Dockerfile --tag phoiweb .
 - run docker container
   
   ```shell
-  docker run -d -p 80:80 --name phoiweb phoiweb
+  docker run -d -p 80:80 --restart=always --name phoiweb phoiweb
   ```
