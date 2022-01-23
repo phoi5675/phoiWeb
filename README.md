@@ -3,10 +3,11 @@
 blog using react
 
 # build
+
 - build docker container
   
   ```shell
-docker build --rm -f dockerfiles/Dockerfile --tag phoiweb .
+  docker build --rm -f dockerfiles/Dockerfile --tag phoiweb .
   ```
 - run docker container
   
