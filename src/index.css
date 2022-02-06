@@ -1,0 +1,13 @@
+:root {
+    --light-theme: #FFFFFF;
+    --light-theme-font-color: #000000;
+}
+
+@font-face {
+    font-family: "NanumGothic";
+    src: url("fonts/NanumGothic.ttf");
+}
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("fonts/JetBrainsMono.ttf");
+}

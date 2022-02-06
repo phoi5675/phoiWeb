@@ -2,7 +2,7 @@
 
 blog using react
 
-# build
+# Build
 
 - build docker container
   
@@ -14,3 +14,7 @@ blog using react
   ```shell
   docker run -d -p 80:80 --restart=always --name phoiweb phoiweb
   ```
+
+# Used fonts
+- NanumGothic
+- JetBrainsMono
