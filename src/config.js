@@ -1,0 +1,1 @@
+export const PAGE_ROOT = "http://www.phoiweb.com:8080"
