@@ -9,7 +9,7 @@ const Markdown = ({markdown, board, article, ...props}) => {
       <ReactMarkdown
         transformImageUri={uri =>
           uri.startsWith("http") ? uri :
-            `${process.env.REACT_APP_URL}${boardPath}${uri.replace("./", "/")}`
+            `${boardPath}${uri.replace("./", "/")}`
       }>{markdown}</ReactMarkdown>
   );
 }

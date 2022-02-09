@@ -40,5 +40,6 @@
   "homepage": ".",
   "devDependencies": {
     "webpack": "^4.29.6"
-  }
+  },
+  "proxy": "http://phoiweb.iptime.org:8000"
 }
