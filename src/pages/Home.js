@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import styles from './Home.module.css';
 
 import markDown from './intro.md';
-import { PAGE_ROOT } from '../config';
+import Markdown from '../components/Markdown';
 
 const Home = () => {
 
@@ -19,10 +18,7 @@ const Home = () => {
   return (
     <div className={styles.content}>
       <h1>Hello, world!</h1><br/>
-      <ReactMarkdown
-        transformImageUri={uri =>
-          uri.startsWith("http") ? uri : `${PAGE_ROOT}${uri.replace("./", "/")}`
-        }>{mdString}</ReactMarkdown>
+      <Markdown markdown={mdString} board="" article=""/>
     </div>
   );
 }
