@@ -49,4 +49,5 @@
 
 .content {
     flex: 80%;
+    max-width: 80%;
 }
