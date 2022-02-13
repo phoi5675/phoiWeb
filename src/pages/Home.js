@@ -11,8 +11,6 @@ const Home = () => {
   fetch('/webpage/test/test_title')
     .then((response) => {
       const text = response.text();
-      console.log(response);
-      console.log(text);
       return text;
     })
     .then((text) => {

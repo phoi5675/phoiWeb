@@ -5,6 +5,7 @@ const Markdown = ({markdown, board, article, ...props}) => {
   // get undefined error :(
   const boardPath = `${board}${article}`;
   const resizedImage = (props) => {
+    // eslint-disable-next-line jsx-a11y/alt-text
     return <img {...props} style={{ maxWidth: "100%" }}></img>;
   }
 
