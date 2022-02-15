@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const Menu = () => { 
   const [boardList, setBoardList] = useState([]);
+  const [isBoardVisible, setIsBoardVisible] = useState(false);
 
   useEffect(() => {
     fetch('/webpage/boards')
@@ -15,8 +16,11 @@ const Menu = () => {
         const json = JSON.parse(respText);
         setBoardList(
           json.map((board) => {
-            console.log(board);
-            return <li key={board.fields.id}>{board.fields.storage_path}</li>;
+            return (
+              <li key={board.fields.id}
+                className={styles.menu_items}>
+                {board.pk}
+              </li>);
           }));
       })
       .catch(err => console.log(err));
@@ -24,9 +28,20 @@ const Menu = () => {
   
   return (
     <div className={styles.menu_container}>
-      <ul>{boardList}</ul>
-      <Link className={styles.menu} to='/board'>Boards</Link>
-      <Link className={styles.menu} to='/about'>About</Link>
+      <div className={styles.menu}>
+        <button className={styles.menu_btn} 
+          onClick={(e) => {
+            setIsBoardVisible(!isBoardVisible);
+          }}>Boards</button>
+        {
+          isBoardVisible ?
+          <ul>{boardList}</ul>
+          : null
+        }
+      </div>
+      <Link className={styles.menu} to='/about'>
+        <p className={styles.menu_btn}>About</p>
+      </Link>
     </div>
   );
 };
