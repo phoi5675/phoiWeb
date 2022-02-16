@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import Header from "./Header";
 
 // Pages
-import { About, Error, Board, Home } from "./pages";
+import { About, Error, Boards, Home } from "./pages";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/board" element={<Board />} />
+              <Route path="/boards/:board" element={<Boards />} />
               <Route path="/*" element={<Error />} />
             </Routes>
           </div>
