@@ -6,20 +6,10 @@ import Markdown from '../components/Markdown';
 
 const Home = () => {
 
-  const [mdString, setMdString] = useState('loading...');
-
-  fetch('/webpage/test/test_title')
-    .then((response) => {
-      const text = response.text();
-      return text;
-    })
-    .then((text) => {
-      setMdString(text);
-    })
-
   return (
     <div className={styles.content}>
-      <Markdown markdown={mdString} board="/test" article="/test_title"/>
+      <p>Hello, World!</p>
+      <p>안녕하세요. phoiweb 입니다</p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 :root {
     --light-theme: #FFFFFF;
     --light-theme-font-color: #000000;
+    --light-theme-font-date-color: #656565;
 }
 
 @font-face {
