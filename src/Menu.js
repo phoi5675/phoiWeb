@@ -14,14 +14,18 @@ const Menu = () => {
       })
       .then(respText => {
         const json = JSON.parse(respText);
-        setBoardList(
-          json.map((board) => {
-            return (
-              <li key={board.fields.id}
-                className={styles.menu_items}>
-                {board.pk}
-              </li>);
-          }));
+        return json.map((board) => {
+          const to = `/boards/${board.pk}`;
+          return (
+            <Link key={board.fields.id}
+              className={styles.menu_items}
+              to={to}>
+              {board.pk}
+            </Link>);
+        });
+      })
+      .then(components => {
+        setBoardList(components);
       })
       .catch(err => console.log(err));
     }, []);
@@ -35,7 +39,7 @@ const Menu = () => {
           }}>Boards</button>
         {
           isBoardVisible ?
-          <ul>{boardList}</ul>
+          boardList.map(board => board)
           : null
         }
       </div>

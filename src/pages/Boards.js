@@ -14,23 +14,28 @@ const Boards = () => {
       })
       .then(respText => {
         const json = JSON.parse(respText);
-        setArticles(
-          json.map((article) => {
-            return (
-              <div key={article.pk}>
-                <p>title : {article.fields.title}</p>
-                <p>date : {article.fields.date}</p>
-                <p>{article.fields.preview_text}</p>
-              </div>
-            );
-          })
-        );
+
+        if (Object.keys(json).length > 0){
+          const _articles = json.map((article) => {
+              return (
+                <div key={article.pk}>
+                  <p>title : {article.fields.title}</p>
+                  <p>date : {article.fields.date}</p>
+                  <p>{article.fields.preview_text}</p>
+                </div>
+              )});
+          setArticles(_articles);
+        }
+        else {
+           setArticles([<p key={0}>NO ARTICLES!</p>]);
+        }
       })
       .catch(err => console.log(err));
   }, [board]);
+
   return (
     <div className={styles.header}>
-      {articles}
+      {articles.map(article => article)}
     </div>
   );
 }

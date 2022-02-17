@@ -68,8 +68,13 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 25px;
+    color: var(--light-theme-font-color);
 
     list-style: none;
+    text-decoration: none;
+
+    margin-top: 5px;
+    margin-left: 20px;
 }
 .content {
     flex: 80%;
