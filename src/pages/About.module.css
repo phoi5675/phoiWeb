@@ -1,3 +1,11 @@
 .content {
     font-size: 25px;
+    text-decoration: none;
+
+    color: var(--light-theme-font-color);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--light-theme-font-link-color);
 }

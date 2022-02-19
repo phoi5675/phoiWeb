@@ -2,6 +2,9 @@
     --light-theme: #FFFFFF;
     --light-theme-font-color: #000000;
     --light-theme-font-date-color: #656565;
+    --light-theme-font-link-color: #231292;
+
+    --dark-theme-font-link-color: #4FC9B0;
 }
 
 @font-face {
