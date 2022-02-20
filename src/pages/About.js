@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import styles from "./About.module.css";
-import { useEffect } from "react";
 
 const About = () => {
   const img1 = require('../assets/img_1.jpeg');
   const img2 = require('../assets/img_2.jpeg');
   const [displayed, setDisplayed] = useState(img1);
-  const [toggle, setToggle] = useState(true);
-
-  useEffect(() => {
-    displayed === img1 ? setDisplayed(img2) : setDisplayed(img1);
-  }, [toggle]);
 
   return (
     <div className={styles.content}>
@@ -22,7 +16,9 @@ const About = () => {
       <br/>
       <img
         src={displayed}
-        onClick={() => setToggle(!toggle)}
+        onClick={() => {
+          displayed === img1 ? setDisplayed(img2) : setDisplayed(img1);
+        }}
         alt="myPic"/>
     </div>
   );
