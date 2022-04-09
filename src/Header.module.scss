@@ -1,0 +1,52 @@
+@import url('index.scss');
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+
+    height: 10%;
+    margin-right: 15%;
+    margin-left: 15%;
+    .navHome
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+    .navText
+    {
+        font-family: 'JetBrainsMono';
+        font-size: 30px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 40px;
+
+        text-decoration: none;
+
+        color: var(--light-theme-font-color);
+    }
+    .searchBtn
+    {
+        display: inline-block;
+
+        box-sizing: border-box;
+        width: 55px;
+        height: 55px;
+        margin: 25px;
+        margin-left: auto;
+        padding: 10px;
+
+        border: 2px;
+        border-color: solid rgba(0, 0, 0, .01);
+        border-radius: 10px;
+        background: var(--light-theme);
+
+        filter: drop-shadow(2.5px 2.5px 6px rgba(0, 0, 0, .5));
+        .searchIcon
+        {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}

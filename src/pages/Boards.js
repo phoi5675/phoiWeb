@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Boards.module.css";
+import styles from "./Boards.module.scss";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";

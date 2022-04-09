@@ -1,0 +1,30 @@
+.main_container
+{
+    align-content: center;
+    flex: 1;
+    flex-direction: column;
+
+    height: 100vh;
+    .content_container
+    {
+        display: flex;
+        align-content: stretch;
+        flex-direction: row;
+
+        height: 90%;
+        padding-right: 15%;
+        padding-left: 15%;
+        .content
+        {
+            flex: 80%;
+
+            max-width: 80%;
+            margin: 20px;
+            padding: 0 25px 25px 25px;
+
+            border-radius: 10px;
+            /* light_main */
+            box-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, .5);
+        }
+    }
+}
