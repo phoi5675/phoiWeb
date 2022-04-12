@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import classNames from "classnames";
+
 import styles from "./Header.module.scss";
 import { ReactComponent as SearchIcon } from "./assets/searchIcon.svg";
 
+const { useState } = React;
+
 const Header = () => {
+  const [isSearchClicked, setIsSearchClicked] = useState(false);
+
   return (
     <div className={styles.container}>
       <nav className={styles.navHome}>
@@ -12,8 +18,26 @@ const Header = () => {
           phoiweb.com
         </Link>
       </nav>
-      <div className={styles.searchBtn}>
-        <SearchIcon className={styles.searchIcon} />
+      <div className={styles["search-btn"]}>
+        <SearchIcon
+          className={styles.searchIcon}
+          onClick={() => {
+            setIsSearchClicked(!isSearchClicked);
+          }}
+        />
+        <div
+          className={classNames(
+            styles["text-box-container"],
+            isSearchClicked && styles["clicked"]
+          )}
+        >
+          <input
+            type="text"
+            name="searchText"
+            placeholder="search..."
+            className={styles["text-box"]}
+          />
+        </div>
       </div>
     </div>
   );

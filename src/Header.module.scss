@@ -26,16 +26,19 @@
 
         color: var(--light-theme-font-color);
     }
-    .searchBtn
+
+    .search-btn
     {
-        display: inline-block;
+        display: flex;
+        align-items: center;
 
         box-sizing: border-box;
-        width: 55px;
-        height: 55px;
+        min-width: 55px;
+        min-height: 55px;
         margin: 25px;
         margin-left: auto;
-        padding: 10px;
+        margin-left: auto;
+        padding: 25px 10px 25px 10px;
 
         border: 2px;
         border-color: solid rgba(0, 0, 0, .01);
@@ -45,8 +48,41 @@
         filter: drop-shadow(2.5px 2.5px 6px rgba(0, 0, 0, .5));
         .searchIcon
         {
-            width: 35px;
             height: 35px;
+
+            cursor: pointer;
+        }
+        .text-box-container
+        {
+            width: 0;
+            min-height: 100%;
+            margin: 0;
+
+            transition-duration: .5s;
+            transition-property: width;
+
+            &.clicked
+            {
+                width: 100%;
+                margin-left: 10px;
+
+                transform: scaleX(1);
+            }
+            .text-box
+            {
+                font-family: 'NanumGothic';
+                font-size: 25px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 25px;
+
+                display: flex;
+                align-items: center;
+
+                width: 100%;
+
+                border: 0;
+            }
         }
     }
 }
