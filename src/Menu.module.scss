@@ -1,4 +1,4 @@
-.menu_container
+.menu-container
 {
     flex: 20%;
 
@@ -29,7 +29,7 @@
         {
             cursor: pointer;
         }
-        .menu_btn
+        .menu-btn
         {
             font-family: 'NanumGothic';
             font-size: 25px;
@@ -43,12 +43,12 @@
             white-space: pre-line;
             text-decoration: none;
 
-            color: var(--light-theme-font-color);
+            color: var(--light-theme-font-black);
             border: 0;
             outline: 0;
             background: var(--light-theme);
         }
-        .menu_items
+        .menu-items
         {
             font-family: 'NanumGothic';
             font-size: 20px;
@@ -62,7 +62,7 @@
 
             text-decoration: none;
 
-            color: var(--light-theme-font-color);
+            color: var(--light-theme-font-black);
         }
     }
 }

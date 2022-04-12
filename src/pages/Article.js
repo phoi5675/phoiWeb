@@ -26,7 +26,7 @@ const Article = () => {
   );
 
   return (
-    <div className={styles.content}>
+    <div className={styles["content"]}>
       <Markdown markdown={mdString} board={boardPath} article={titlePath} />
     </div>
   );

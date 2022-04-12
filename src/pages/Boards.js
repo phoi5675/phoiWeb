@@ -30,8 +30,8 @@ const Boards = () => {
   }, [board]);
 
   return (
-    <div className={styles.container}>
-      <p className={styles.header}>{board}</p>
+    <div className={styles["container"]}>
+      <p className={styles["header"]}>{board}</p>
       <div>
         {articles.length === 0
           ? loadingText
@@ -52,16 +52,20 @@ const Article = ({ article }) => {
     );
   };
   return (
-    <div className={styles.article_container}>
+    <div className={styles["article-container"]}>
       <Link
-        className={styles.article_link}
+        className={styles["article-link"]}
         to={`/${article.fields.board_name}/${article.fields.title}`}
         board={article.fields.board_name}
         title={article.fields.title}
       >
-        <p className={styles.article_title}>{article.fields.title}</p>
-        <p className={styles.article_date}>{formatDate(article.fields.date)}</p>
-        <p className={styles.article_preview}>{article.fields.preview_text}</p>
+        <p className={styles["article-title"]}>{article.fields.title}</p>
+        <p className={styles["article-date"]}>
+          {formatDate(article.fields.date)}
+        </p>
+        <p className={styles["article-preview"]}>
+          {article.fields.preview_text}
+        </p>
       </Link>
     </div>
   );

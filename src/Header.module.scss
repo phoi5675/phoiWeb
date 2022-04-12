@@ -8,13 +8,13 @@
     height: 10%;
     margin-right: 15%;
     margin-left: 15%;
-    .navHome
+    .nav-home
     {
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 30px;
     }
-    .navText
+    .nav-text
     {
         font-family: 'JetBrainsMono';
         font-size: 30px;
@@ -24,7 +24,7 @@
 
         text-decoration: none;
 
-        color: var(--light-theme-font-color);
+        color: var(--light-theme-font-black);
     }
 
     .search-btn
@@ -46,7 +46,7 @@
         background: var(--light-theme);
 
         filter: drop-shadow(2.5px 2.5px 6px rgba(0, 0, 0, .5));
-        .searchIcon
+        .search-icon
         {
             height: 35px;
 
@@ -81,6 +81,7 @@
 
                 width: 100%;
 
+                color: var(--light-theme-font-black);
                 border: 0;
             }
         }

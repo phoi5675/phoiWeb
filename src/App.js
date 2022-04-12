@@ -11,10 +11,10 @@ import { About, Error, Boards, Home, Article } from "./pages";
 
 const App = () => {
   return (
-    <div className={styles.main_container}>
+    <div className={styles["main-container"]}>
       <BrowserRouter>
         <Header />
-        <div className={styles.content_container}>
+        <div className={styles["content-container"]}>
           <Menu />
           <div className={styles.content}>
             <Routes>

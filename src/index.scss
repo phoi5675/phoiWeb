@@ -1,17 +1,21 @@
-:root {
-    --light-theme: #FFFFFF;
-    --light-theme-font-color: #000000;
-    --light-theme-font-date-color: #656565;
+:root
+{
+    --light-theme: #fff;
+    --light-theme-font-black: #000;
+    --light-theme-font-gray: #656565;
     --light-theme-font-link-color: #231292;
-
-    --dark-theme-font-link-color: #4FC9B0;
+    --dark-theme-font-link-color: #4fc9b0;
 }
 
-@font-face {
-    font-family: "NanumGothic";
-    src: url("fonts/NanumGothic.ttf");
+@font-face
+{
+    font-family: 'NanumGothic';
+
+    src: url('fonts/NanumGothic.ttf');
 }
-@font-face {
-    font-family: "JetBrainsMono";
-    src: url("fonts/JetBrainsMono.ttf");
+@font-face
+{
+    font-family: 'JetBrainsMono';
+
+    src: url('fonts/JetBrainsMono.ttf');
 }

@@ -30,18 +30,18 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className={styles.menu_container}>
+    <div className={styles["menu-container"]}>
       <div
-        className={styles.menu}
+        className={styles["menu"]}
         onClick={(e) => {
           setIsBoardVisible(!isBoardVisible);
         }}
       >
-        <span className={styles.menu_btn}>Boards</span>
+        <span className={styles["menu-btn"]}>Boards</span>
         {isBoardVisible ? boardList.map((board) => board) : null}
       </div>
-      <Link className={styles.menu} to="/about">
-        <span className={styles.menu_btn}>About</span>
+      <Link className={styles["menu"]} to="/about">
+        <span className={styles["menu-btn"]}>About</span>
       </Link>
     </div>
   );

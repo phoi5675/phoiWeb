@@ -12,15 +12,15 @@ const Header = () => {
   const [isSearchClicked, setIsSearchClicked] = useState(false);
 
   return (
-    <div className={styles.container}>
-      <nav className={styles.navHome}>
-        <Link className={styles.navText} to="/">
+    <div className={styles["container"]}>
+      <nav className={styles["nav-home"]}>
+        <Link className={styles["nav-text"]} to="/">
           phoiweb.com
         </Link>
       </nav>
       <div className={styles["search-btn"]}>
         <SearchIcon
-          className={styles.searchIcon}
+          className={styles["search-icon"]}
           onClick={() => {
             setIsSearchClicked(!isSearchClicked);
           }}
