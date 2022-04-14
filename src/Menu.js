@@ -17,7 +17,11 @@ const Menu = () => {
         return json.map((board) => {
           const to = `/boards/${board.pk}`;
           return (
-            <Link key={board.fields.id} className={styles.menu_items} to={to}>
+            <Link
+              key={board.fields.id}
+              className={styles["menu-items"]}
+              to={to}
+            >
               {board.pk}
             </Link>
           );

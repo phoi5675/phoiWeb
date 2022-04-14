@@ -1,11 +1,12 @@
 import React from "react";
-import { useState } from "react";
 import styles from "./Article.module.scss";
 
 import Markdown from "../components/Markdown";
 import { useParams } from "react-router-dom";
 
 const Article = () => {
+  const { useState, useEffect } = React;
+
   const { board, title } = useParams();
   const [mdString, setMdString] = useState("loading...");
 
@@ -13,7 +14,7 @@ const Article = () => {
   const titlePath = `/${title}`;
   const url = `/webpage${boardPath}${titlePath}`;
 
-  useState(
+  useEffect(() => {
     fetch(url)
       .then((response) => {
         const text = response.text();
@@ -21,9 +22,8 @@ const Article = () => {
       })
       .then((text) => {
         setMdString(text);
-      }),
-    []
-  );
+      });
+  }, []);
 
   return (
     <div className={styles["content"]}>

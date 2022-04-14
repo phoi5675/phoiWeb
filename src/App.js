@@ -16,7 +16,7 @@ const App = () => {
         <Header />
         <div className={styles["content-container"]}>
           <Menu />
-          <div className={styles.content}>
+          <div className={styles["content"]}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

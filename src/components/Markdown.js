@@ -1,23 +1,25 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import React from "react";
+import ReactMarkdown from "react-markdown";
 
-const Markdown = ({markdown, board, article, ...props}) => { 
+const Markdown = ({ markdown, board, article, ...props }) => {
   // get undefined error :(
   const boardPath = `${board}${article}`;
   const resizedImage = (props) => {
-    // eslint-disable-next-line jsx-a11y/alt-text
-    return <img {...props} style={{ maxWidth: "100%" }}></img>;
-  }
+    // console.log("props");
+    return <img {...props} style={{ maxWidth: "100%" }} alt="" />;
+  };
 
   return (
-      <ReactMarkdown
-        transformImageUri={uri =>
-          uri.startsWith("http") ? uri :
-            `${process.env.REACT_APP_URL}${boardPath}${uri.replace("./", "/")}`
-        }
-        renders={{image: resizedImage}}
-        children={markdown}/>
+    <ReactMarkdown
+      transformImageUri={(uri) =>
+        uri.startsWith("http")
+          ? uri
+          : `${process.env.REACT_APP_URL}${boardPath}${uri.replace("./", "/")}`
+      }
+      renders={{ image: resizedImage }}
+      children={markdown}
+    />
   );
-}
+};
 
 export default Markdown;
